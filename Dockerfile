@@ -13,7 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app.py .
 
 # 暴露端口
-EXPOSE 5000
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 # 启动命令
 CMD ["python", "app.py"]
