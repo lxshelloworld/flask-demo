@@ -27,6 +27,7 @@ jobs:
       - name: Push Docker image to Docker Hub
         run: |
           docker push lfortest/my-firstapp:latest
+          
       - name: Auth to Goole Cloud
         uses: google-github-actions/auth@v1
         with: 
